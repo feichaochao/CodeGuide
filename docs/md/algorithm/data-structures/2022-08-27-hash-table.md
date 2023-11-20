@@ -104,7 +104,7 @@ public void test_hashMap01() {
     // 下标碰撞
     map.put("09", "蛋蛋");
     map.put("12", "苗苗");
-    logger.info("碰撞前 key：{} value：{}", "01", map.get("01"));
+    logger.info("碰撞后 key：{} value：{}", "01", map.get("01"));
 }
 ```
 
@@ -114,7 +114,7 @@ public void test_hashMap01() {
 
 ```java
 06:58:41.691 [main] INFO cn.bugstack.algorithms.test.AlgorithmsTest - 碰撞前 key：01 value：花花
-06:58:41.696 [main] INFO cn.bugstack.algorithms.test.AlgorithmsTest - 碰撞前 key：01 value：苗苗
+06:58:41.696 [main] INFO cn.bugstack.algorithms.test.AlgorithmsTest - 碰撞后 key：01 value：苗苗
 
 Process finished with exit code 0
 ```
@@ -193,7 +193,7 @@ public void test_hashMap02() {
     // 下标碰撞
     map.put("09", "蛋蛋");
     map.put("12", "苗苗");
-    logger.info("碰撞前 key：{} value：{}", "01", map.get("01"));
+    logger.info("碰撞后 key：{} value：{}", "01", map.get("01"));
 }
 ```
 
@@ -201,7 +201,7 @@ public void test_hashMap02() {
 
 ```java
 07:21:16.654 [main] INFO cn.bugstack.algorithms.test.AlgorithmsTest - 碰撞前 key：01 value：花花
-07:22:44.651 [main] INFO cn.bugstack.algorithms.test.AlgorithmsTest - 碰撞前 key：01 value：花花
+07:22:44.651 [main] INFO cn.bugstack.algorithms.test.AlgorithmsTest - 碰撞后 key：01 value：花花
 
 Process finished with exit code 0
 ```
@@ -274,7 +274,7 @@ public void test_hashMap03() {
     // 下标碰撞
     map.put("09", "蛋蛋");
     map.put("12", "苗苗");
-    logger.info("碰撞前 key：{} value：{}", "01", map.get("01"));
+    logger.info("碰撞后 key：{} value：{}", "01", map.get("01"));
 }
 ```
 
@@ -282,7 +282,7 @@ public void test_hashMap03() {
 
 ```java
 07:20:22.382 [main] INFO cn.bugstack.algorithms.test.AlgorithmsTest - 碰撞前 key：01 value：花花
-07:20:22.387 [main] INFO cn.bugstack.algorithms.test.AlgorithmsTest - 碰撞前 key：01 value：花花
+07:20:22.387 [main] INFO cn.bugstack.algorithms.test.AlgorithmsTest - 碰撞后 key：01 value：花花
 07:20:22.387 [main] INFO cn.bugstack.algorithms.test.AlgorithmsTest - 数据结构：HashMap{tab=[null,{"key":"01","value":"花花"},{"key":"09","value":"蛋蛋"},{"key":"12","value":"苗苗"},null,{"key":"05","value":"豆豆"},null,null]}
 
 Process finished with exit code 0
@@ -353,7 +353,7 @@ public class HashMap04ByCoalescedHashing<K, V> implements Map<K, V> {
 
 ```java
 07:18:43.613 [main] INFO cn.bugstack.algorithms.test.AlgorithmsTest - 碰撞前 key：01 value：花花
-07:18:43.618 [main] INFO cn.bugstack.algorithms.test.AlgorithmsTest - 碰撞前 key：01 value：苗苗
+07:18:43.618 [main] INFO cn.bugstack.algorithms.test.AlgorithmsTest - 碰撞后 key：01 value：苗苗
 07:18:43.619 [main] INFO cn.bugstack.algorithms.test.AlgorithmsTest - 数据结构：HashMap{tab=[null,{"idxOfNext":7,"key":"01","value":"花花"},null,null,null,{"idxOfNext":0,"key":"05","value":"豆豆"},{"idxOfNext":0,"key":"12","value":"苗苗"},{"idxOfNext":6,"key":"09","value":"蛋蛋"}]}
 
 Process finished with exit code 0
@@ -540,7 +540,7 @@ public void test_hashMap07() {
     // 下标碰撞
     map.put("09", "蛋蛋");
     map.put("12", "苗苗");
-    logger.info("碰撞前 key：{} value：{}", "01", map.get("12"));
+    logger.info("碰撞后 key：{} value：{}", "01", map.get("12"));
     logger.info("数据结构：{}", map);
 }
 ```
@@ -555,7 +555,7 @@ public void test_hashMap07() {
 09 9
 12 1
 05 5
-07:35:07.419 [main] INFO cn.bugstack.algorithms.test.AlgorithmsTest - 碰撞前 key：01 value：苗苗
+07:35:07.419 [main] INFO cn.bugstack.algorithms.test.AlgorithmsTest - 碰撞后 key：01 value：苗苗
 07:35:07.420 [main] INFO cn.bugstack.algorithms.test.AlgorithmsTest - 数据结构：HashMap{tab=[null,{"key":"01","offset":0,"value":"花花"},{"key":"12","offset":1,"value":"苗苗"},null,null,{"key":"05","offset":0,"value":"豆豆"},null,null,null,{"key":"09","offset":0,"value":"蛋蛋"},null,null,null,null,null,null]}
 
 Process finished with exit code 0
